@@ -10,7 +10,7 @@
 
 Este repositorio se desarrolla con el fin de lograr una mayor comprensión de la forma en que se realizan los cálculos actuariales en Colombia según las normas establecidas por las instituciones responsables.
 
-A continuación una breve descripción de las formulas tenidas en cuenta apra su desarrollo, según las normas citadas en el título de este documento:
+A continuación una breve descripción de las formulas tenidas en cuenta para su desarrollo, según las normas citadas en el título de este documento:
 
 
 ## Formula General de Cálculo actuarial.
