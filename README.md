@@ -43,32 +43,31 @@ $$V_{0} = \dfrac{d_{1} \cdot V_{2} + d_{2} \cdot V_{1}}{d_{1} + d_{2}}$$
 
 * *Según Decreto 1833 de 2016: "La tasa de remplazo se determina adoptando las reglas establecidas en el artículo 34 de la Ley 100 de 1993, modificado por el artículo 10 de la Ley 797 de 2003, así:"*
 $$TR = \left[0.655 - 0.005 \cdot \min\left[\left(\dfrac{SR}{SMMLV_{FC}}\right) , 21\right]\right] + \min \left[0.015 \cdot \left(\dfrac{(n + t) \cdot 52.18 - SemMin}{50}\right) , 0.15\right]$$
-* *t = Años y fracción cotizados al sistema*
-* *n = Años faltantes hasta la fecha de pensión*
+* t = *Años y fracción cotizados al sistema*
+* n = *Años faltantes hasta la fecha de pensión*
 
 *Nota: Estos valores son calculados con corte a la fecha de referencia en caso de ser anterior a la fecha de pago, o en caso contrario con corte a la fecha de pago.
 
-### Factor actuarial uno *$FAC_{1}$ ***(valor presente de una renta vitalicia)***
+### Factor actuarial uno $FAC_{1}$ ***(valor presente de una renta vitalicia)***
 
 *Aunque existen discusiones técnicas sobre su actualización debido al incremento en la expectativa de vida, la [Resolución 1555 de 2010](https://www.fasecolda.com/wp-content/uploads/res-1555-2010.pdf) sigue siendo el estándar legal vigente para los cálculos actuariales de administradoras de pensiones y aseguradoras de vida*
 $$FAC_{1} = \displaystyle\sum^{\omega - x}_{t=0}\dfrac{1}{(1 + i)^t}\cdot {}_{t}p_{x}$$
-* *x = Edad de pensión
-* *t = Es el año futuro que estamos calculando (después de la pensión)*
-* *$\omega$ = Es el tiempo máximo que podría vivir una persona (110 o 115 años en Colombia)
-* *i = Es la tasa de interés técnico 4% o 3% según fecha de afiliación*
-* *${}_{t}p_{x}$ = Probabilidad de supervivencia*
+* x = *Edad de pensión*
+* t = *Es el año futuro que estamos calculando (después de la pensión)*
+* $\omega$ = *Es el tiempo máximo que podría vivir una persona (110 o 115 años en Colombia)*
+* i = *Es la tasa de interés técnico 4% o 3% según fecha de afiliación*
+* ${}_{t}p_{x}$ = *Probabilidad de supervivencia*
 
 ### Auxilio Funerario de referencia $AR$
 
 *Según Decreto 1833 de 2016 Artículo 2.2.4.4.2: "Definido como un valor igual a PR sin que sea inferior a cinco (5) salarios mínimos legales mensuales vigentes ni superior a diez (10) salarios mínimos legales mensuales vigentes a la fecha de corte".
 
 
-
 ### Factor actuarial dos $FAC_{2}$ ***(Auxilio Funerario)***
 
 $$FAC_{2} = \displaystyle\sum_{t = 0}^{\omega - x} \dfrac{1}{(1 + i)^{t + 1}} \cdot {}_{t}|q_{x}$$
 
-* *${}_{t}|q_{x}$ = Probabilidad de fallecer en el año inmediatamente siguiente*
+* ${}_{t}|q_{x}$ = *Probabilidad de fallecer en el año inmediatamente siguiente*
 
 ### Factor actuarial tres $FAC_{3}$ ***(Interés real acumulado como factor de descuento cuando FC es menor que FR)***
 
@@ -76,6 +75,6 @@ $$FAC_{3} = \left(1 + i\right)^\frac{FC-FR}{365,25}$$
 ### DTF Pensional (Actualización de la Reserva Actuarial, Protege el valor de la reserva frente a la inflación).
 
 $$DTF Pensional_{i} = 1,03 \times\left(1 + INF_{i}\right)$$
-* *$TIRR$ = Tasa Real de Rendimiento equivalente a 1,03
-* *$INF_{i}$ = "Variación anual del Índice de Precios al Consumidor (IPC) calculado por el DANE del año calendario inmediatamente anterior"
+* $TIRR$ = *Tasa Real de Rendimiento equivalente a 0,03 o 0.04 (ver norma)*
+* $INF_{i}$ = *"Variación anual del Índice de Precios al Consumidor (IPC) calculado por el DANE del año calendario inmediatamente anterior"*
 
