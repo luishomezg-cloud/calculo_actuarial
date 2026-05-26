@@ -42,7 +42,9 @@ $$V_{0} = \dfrac{d_{1} \cdot V_{2} + d_{2} \cdot V_{1}}{d_{1} + d_{2}}$$
 ### Tasa de referencia $TR$.
 
 * *Según Decreto 1833 de 2016: "La tasa de remplazo se determina adoptando las reglas establecidas en el artículo 34 de la Ley 100 de 1993, modificado por el artículo 10 de la Ley 797 de 2003, así:"*
+
 $$TR = \left[0.655 - 0.005 \cdot \min\left[\left(\dfrac{SR}{SMMLV_{FC}}\right) , 21\right]\right] + \min \left[0.015 \cdot \left(\dfrac{(n + t) \cdot 52.18 - SemMin}{50}\right) , 0.15\right]$$
+
 * t = *Años y fracción cotizados al sistema*
 * n = *Años faltantes hasta la fecha de pensión*
 
@@ -51,12 +53,14 @@ $$TR = \left[0.655 - 0.005 \cdot \min\left[\left(\dfrac{SR}{SMMLV_{FC}}\right) ,
 ### Factor actuarial uno $FAC_{1}$ ***(valor presente de una renta vitalicia)***
 
 *Aunque existen discusiones técnicas sobre su actualización debido al incremento en la expectativa de vida, la [Resolución 1555 de 2010](https://www.fasecolda.com/wp-content/uploads/res-1555-2010.pdf) sigue siendo el estándar legal vigente para los cálculos actuariales de administradoras de pensiones y aseguradoras de vida*
-$$FAC_{1} = \displaystyle\sum^{\omega - x}_{t=0}\dfrac{1}{(1 + i)^t}\cdot {}_{t}p_{x}$$
+
+$$FAC_{1} = \displaystyle\sum^{\omega - x}_{t=0}\dfrac{1}{(1 + i)^t}\cdot { }_{t}p_{x}$$
+
 * x = *Edad de pensión*
 * t = *Es el año futuro que estamos calculando (después de la pensión)*
 * $\omega$ = *Es el tiempo máximo que podría vivir una persona (110 o 115 años en Colombia)*
 * i = *Es la tasa de interés técnico 4% o 3% según fecha de afiliación*
-* ${}_{t}p_{x}$ = *Probabilidad de supervivencia*
+* ${ }_{t}p_{x}$ = *Probabilidad de supervivencia*
 
 ### Auxilio Funerario de referencia $AR$
 
