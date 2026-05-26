@@ -42,7 +42,7 @@ $$V_{0} = \dfrac{d_{1} \cdot V_{2} + d_{2} \cdot V_{1}}{d_{1} + d_{2}}$$
 ### Tasa de referencia $TR$.
 
 * *Según Decreto 1833 de 2016: "La tasa de remplazo se determina adoptando las reglas establecidas en el artículo 34 de la Ley 100 de 1993, modificado por el artículo 10 de la Ley 797 de 2003, así:"*
-$$TR = \left\{0.655 - 0.005 \cdot \min\left\{\left(\dfrac{SR}{SMMLV_{FC}}\right) , 21\right\}\right\} + \min \left\{0.015 \cdot \left(\dfrac{(n + t) \cdot 52.18 - SemMin}{50}\right) , 0.15\right\}$$
+$$TR = \left[0.655 - 0.005 \cdot \min\left[\left(\dfrac{SR}{SMMLV_{FC}}\right) , 21\right]\right] + \min \left[0.015 \cdot \left(\dfrac{(n + t) \cdot 52.18 - SemMin}{50}\right) , 0.15\right]$$
 * *t = Años y fracción cotizados al sistema*
 * *n = Años faltantes hasta la fecha de pensión*
 
