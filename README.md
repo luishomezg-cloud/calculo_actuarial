@@ -66,7 +66,6 @@ $$FAC_{1} = \displaystyle\sum^{\omega - x}_{t=0}\dfrac{1}{(1 + i)^t}\cdot { }_{t
 
 *Según Decreto 1833 de 2016 Artículo 2.2.4.4.2: "Definido como un valor igual a PR sin que sea inferior a cinco (5) salarios mínimos legales mensuales vigentes ni superior a diez (10) salarios mínimos legales mensuales vigentes a la fecha de corte".
 
-
 ### Factor actuarial dos $FAC_{2}$ ***(Auxilio Funerario)***
 
 $$FAC_{2} = \displaystyle\sum_{t = 0}^{\omega - x} \dfrac{1}{(1 + i)^{t + 1}} \cdot {}_{t}|q_{x}$$
