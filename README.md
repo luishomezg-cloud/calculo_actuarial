@@ -15,13 +15,13 @@ A continuación una breve descripción de las formulas tenidas en cuenta para su
 
 ## Formula General de Cálculo actuarial.
 
-$$\boxed{VRA\,=\,\left[\left(PR\,\times\,FAC_{1}\right)\,+\,\left(AR\,\times\,FAC_{2}\right)\right]\,\times\,FAC_{3}}$$
+$$\boxed{VRA = \left[\left(PR \times FAC_{1}\right) + \left(AR \times FAC_{2}\right)\right] \times FAC_{3}}$$
 
 ### Pensión de referencia $PR$
 
-$$PR\,=\,SR\,\times\,TR$$
+$$PR = SR \times TR$$
 ### Salario de referencia $SR$.
-$$SR\,=\,SB\,\times\,\dfrac{SMN_{FR}}{SMN_{FC}}$$
+$$SR = SB \times \dfrac{SMN_{FR}}{SMN_{FC}}$$
 
 * $SB$ : Salario base (El último salario a la fecha final de la omisión actualizado con el IPC mensual reportado por el DANE, bien sea a la fecha de referencia o a la fecha de corte).
 * $SMN_{FR}$ : Salario Medio Nacional a la fecha de referencia, conforme registra en la tabla referida por el decreto 1833 de 2016 modificado por el decreto 1296 de 2022.
@@ -31,7 +31,7 @@ $$SR\,=\,SB\,\times\,\dfrac{SMN_{FR}}{SMN_{FC}}$$
 
 Este paso es necesario para el cálculo del Salario de Referencia $SR$, con la mayor exactitud posible de acuerdo a la norma.
 
-$$V_{0}\,=\,\dfrac{d_{1}\,\cdot\,V_{2}\,+\,d_{2}\,\cdot\,V_{1}}{d_{1}\,+\,d_{2}}$$
+$$V_{0} = \dfrac{d_{1} \cdot V_{2} + d_{2} \cdot V_{1}}{d_{1} + d_{2}}$$
 
 * $V_{0}$: El SMN que se desea interpolar correspondiente a una fecha intermedia.
 * $V_{1}$: El SMN a la edad en años completos;
@@ -42,7 +42,7 @@ $$V_{0}\,=\,\dfrac{d_{1}\,\cdot\,V_{2}\,+\,d_{2}\,\cdot\,V_{1}}{d_{1}\,+\,d_{2}}
 ### Tasa de referencia $TR$.
 
 * *Según Decreto 1833 de 2016: "La tasa de remplazo se determina adoptando las reglas establecidas en el artículo 34 de la Ley 100 de 1993, modificado por el artículo 10 de la Ley 797 de 2003, así:"*
-$TR\,=\,\left\{0.655\,-\,0.005\,\cdot\,\min\left\{\left(\dfrac{SR}{SMMLV_{FC}}\right)\,,\,21\right\}\right\}\,+\,\min\,\left\{0.015\,\cdot\,\left(\dfrac{(n\,+\,t)\,\cdot\,52.18\,-\,SemMin}{50}\right)\,,\,0.15\right\}$
+$$TR = \left\{0.655 - 0.005 \cdot \min\left\{\left(\dfrac{SR}{SMMLV_{FC}}\right) , 21\right\}\right\} + \min \left\{0.015 \cdot \left(\dfrac{(n + t) \cdot 52.18 - SemMin}{50}\right) , 0.15\right\}$$
 * *t = Años y fracción cotizados al sistema*
 * *n = Años faltantes hasta la fecha de pensión*
 
@@ -51,7 +51,7 @@ $TR\,=\,\left\{0.655\,-\,0.005\,\cdot\,\min\left\{\left(\dfrac{SR}{SMMLV_{FC}}\r
 ### Factor actuarial uno *$FAC_{1}$ ***(valor presente de una renta vitalicia)***
 
 *Aunque existen discusiones técnicas sobre su actualización debido al incremento en la expectativa de vida, la [Resolución 1555 de 2010](https://www.fasecolda.com/wp-content/uploads/res-1555-2010.pdf) sigue siendo el estándar legal vigente para los cálculos actuariales de administradoras de pensiones y aseguradoras de vida*
-$$FAC_{1}\,=\,\displaystyle\sum^{\omega\,-\,x}_{t=0}\dfrac{1}{(1\,+\,i)^t}\cdot\,{}_{t}p_{x}$$
+$$FAC_{1} = \displaystyle\sum^{\omega - x}_{t=0}\dfrac{1}{(1 + i)^t}\cdot {}_{t}p_{x}$$
 * *x = Edad de pensión
 * *t = Es el año futuro que estamos calculando (después de la pensión)*
 * *$\omega$ = Es el tiempo máximo que podría vivir una persona (110 o 115 años en Colombia)
@@ -66,16 +66,16 @@ $$FAC_{1}\,=\,\displaystyle\sum^{\omega\,-\,x}_{t=0}\dfrac{1}{(1\,+\,i)^t}\cdot\
 
 ### Factor actuarial dos $FAC_{2}$ ***(Auxilio Funerario)***
 
-$$FAC_{2}\,=\,\displaystyle\sum_{t\,=\,0}^{\omega\,-\,x}\,\dfrac{1}{(1\,+\,i)^{t\,+\,1}}\,\cdot\,{}_{t}|q_{x}$$
+$$FAC_{2} = \displaystyle\sum_{t = 0}^{\omega - x} \dfrac{1}{(1 + i)^{t + 1}} \cdot {}_{t}|q_{x}$$
 
 * *${}_{t}|q_{x}$ = Probabilidad de fallecer en el año inmediatamente siguiente*
 
 ### Factor actuarial tres $FAC_{3}$ ***(Interés real acumulado como factor de descuento cuando FC es menor que FR)***
 
-$$FAC_{3}\,=\,\left(1\,+\,i\right)^\frac{FC-FR}{365,25}$$
+$$FAC_{3} = \left(1 + i\right)^\frac{FC-FR}{365,25}$$
 ### DTF Pensional (Actualización de la Reserva Actuarial, Protege el valor de la reserva frente a la inflación).
 
-$$DTF\,Pensional_{i}\,=\,1,03\,\times\left(1\,+\,INF_{i}\right)$$
+$$DTF Pensional_{i} = 1,03 \times\left(1 + INF_{i}\right)$$
 * *$TIRR$ = Tasa Real de Rendimiento equivalente a 1,03
 * *$INF_{i}$ = "Variación anual del Índice de Precios al Consumidor (IPC) calculado por el DANE del año calendario inmediatamente anterior"
 
